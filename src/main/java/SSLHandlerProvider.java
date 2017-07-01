@@ -13,7 +13,7 @@ public class SSLHandlerProvider {
     private static final String PROTOCOL = "TLS";
     private static final String ALGORITHM_SUN_X509="SunX509";
     private static final String ALGORITHM="ssl.KeyManagerFactory.algorithm";
-    private static final String KEYSTORE= "ssl_certs/mytestkeys.jks";
+    private static final String KEYSTORE= "ssl_certs/mysslstore.jks";
     private static final String KEYSTORE_TYPE="JKS";
     private static final String KEYSTORE_PASSWORD= "123456";
     private static final String CERT_PASSWORD="123456";
@@ -67,6 +67,7 @@ public class SSLHandlerProvider {
             KeyManagerFactory kmf = KeyManagerFactory.getInstance(algorithm);
             kmf.init(ks,CERT_PASSWORD.toCharArray());
             KeyManager[] keyManagers = kmf.getKeyManagers();
+            // Setting trust store null since we don't need a CA certificate or Mutual Authentication
             TrustManager[] trustManagers = null;
 
             serverSSLContext = SSLContext.getInstance(PROTOCOL);

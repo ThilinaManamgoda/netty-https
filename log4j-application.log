@@ -1,0 +1,114 @@
+2017-06-07 12:28:23 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-06-07 12:28:23 INFO  LoggingHandler:150 - [id: 0x4f8b5962] REGISTERED
+2017-06-07 12:28:23 INFO  LoggingHandler:150 - [id: 0x4f8b5962] BIND: 0.0.0.0/0.0.0.0:8080
+2017-06-07 12:28:23 INFO  LoggingHandler:150 - [id: 0x4f8b5962, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-06-07 12:28:34 INFO  LoggingHandler:150 - [id: 0x4f8b5962, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x86d2098f, L:/127.0.0.1:8080 - R:/127.0.0.1:62181]
+2017-06-07 12:28:35 INFO  LoggingHandler:150 - [id: 0x4f8b5962, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xa366fca0, L:/127.0.0.1:8080 - R:/127.0.0.1:62182]
+2017-06-07 12:28:47 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-06-07 12:28:48 INFO  LoggingHandler:150 - [id: 0xaae90167] REGISTERED
+2017-06-07 12:28:48 INFO  LoggingHandler:150 - [id: 0xaae90167] BIND: 0.0.0.0/0.0.0.0:8080
+2017-06-07 12:28:48 INFO  LoggingHandler:150 - [id: 0xaae90167, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-06-07 12:28:50 INFO  LoggingHandler:150 - [id: 0xaae90167, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x6832286d, L:/127.0.0.1:8080 - R:/127.0.0.1:62192]
+2017-07-01 15:50:32 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 15:50:33 INFO  LoggingHandler:150 - [id: 0x050fc671] REGISTERED
+2017-07-01 15:50:33 INFO  LoggingHandler:150 - [id: 0x050fc671] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 15:50:33 INFO  LoggingHandler:150 - [id: 0x050fc671, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-07-01 15:50:47 INFO  LoggingHandler:150 - [id: 0x050fc671, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x4a6ab37a, L:/127.0.0.1:8080 - R:/127.0.0.1:59559]
+2017-07-01 15:50:51 INFO  LoggingHandler:150 - [id: 0x050fc671, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xad0a6fad, L:/127.0.0.1:8080 - R:/127.0.0.1:59561]
+2017-07-01 15:50:53 INFO  LoggingHandler:150 - [id: 0x050fc671, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x021f37ca, L:/127.0.0.1:8080 - R:/127.0.0.1:59563]
+2017-07-01 15:51:52 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 15:51:53 ERROR SSLHandlerProvider:50 - Cannot load the keystore file
+java.io.IOException: Keystore was tampered with, or password was incorrect
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:780)
+	at sun.security.provider.JavaKeyStore$JKS.engineLoad(JavaKeyStore.java:56)
+	at sun.security.provider.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:224)
+	at sun.security.provider.JavaKeyStore$DualFormatJKS.engineLoad(JavaKeyStore.java:70)
+	at java.security.KeyStore.load(KeyStore.java:1445)
+	at SSLHandlerProvider.initSSLContext(SSLHandlerProvider.java:48)
+	at Server.main(Server.java:21)
+Caused by: java.security.UnrecoverableKeyException: Password verification failed
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:778)
+	... 6 more
+2017-07-01 15:51:53 ERROR SSLHandlerProvider:77 - Failed to initialize the server-side SSLContext
+java.security.KeyStoreException: Uninitialized keystore
+	at java.security.KeyStore.aliases(KeyStore.java:1233)
+	at sun.security.ssl.SunX509KeyManagerImpl.<init>(SunX509KeyManagerImpl.java:127)
+	at sun.security.ssl.KeyManagerFactoryImpl$SunX509.engineInit(KeyManagerFactoryImpl.java:70)
+	at javax.net.ssl.KeyManagerFactory.init(KeyManagerFactory.java:256)
+	at SSLHandlerProvider.initSSLContext(SSLHandlerProvider.java:68)
+	at Server.main(Server.java:21)
+2017-07-01 15:51:53 INFO  LoggingHandler:150 - [id: 0x1e79b3ca] REGISTERED
+2017-07-01 15:51:53 INFO  LoggingHandler:150 - [id: 0x1e79b3ca] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 15:51:53 INFO  LoggingHandler:150 - [id: 0x1e79b3ca, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-07-01 15:51:54 INFO  LoggingHandler:150 - [id: 0x1e79b3ca, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x65679546, L:/127.0.0.1:8080 - R:/127.0.0.1:59577]
+2017-07-01 15:51:54 ERROR SSLHandlerProvider:25 - Server SSL context is null
+2017-07-01 15:52:45 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 15:52:45 ERROR SSLHandlerProvider:50 - Cannot load the keystore file
+java.io.IOException: Keystore was tampered with, or password was incorrect
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:780)
+	at sun.security.provider.JavaKeyStore$JKS.engineLoad(JavaKeyStore.java:56)
+	at sun.security.provider.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:224)
+	at sun.security.provider.JavaKeyStore$DualFormatJKS.engineLoad(JavaKeyStore.java:70)
+	at java.security.KeyStore.load(KeyStore.java:1445)
+	at SSLHandlerProvider.initSSLContext(SSLHandlerProvider.java:48)
+	at Server.main(Server.java:21)
+Caused by: java.security.UnrecoverableKeyException: Password verification failed
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:778)
+	... 6 more
+2017-07-01 15:52:45 ERROR SSLHandlerProvider:77 - Failed to initialize the server-side SSLContext
+java.security.KeyStoreException: Uninitialized keystore
+	at java.security.KeyStore.aliases(KeyStore.java:1233)
+	at sun.security.ssl.SunX509KeyManagerImpl.<init>(SunX509KeyManagerImpl.java:127)
+	at sun.security.ssl.KeyManagerFactoryImpl$SunX509.engineInit(KeyManagerFactoryImpl.java:70)
+	at javax.net.ssl.KeyManagerFactory.init(KeyManagerFactory.java:256)
+	at SSLHandlerProvider.initSSLContext(SSLHandlerProvider.java:68)
+	at Server.main(Server.java:21)
+2017-07-01 15:52:45 INFO  LoggingHandler:150 - [id: 0xb33a343a] REGISTERED
+2017-07-01 15:52:45 INFO  LoggingHandler:150 - [id: 0xb33a343a] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 15:52:45 INFO  LoggingHandler:150 - [id: 0xb33a343a, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-07-01 15:52:50 INFO  LoggingHandler:150 - [id: 0xb33a343a, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xe8c6ad49, L:/127.0.0.1:8080 - R:/127.0.0.1:59591]
+2017-07-01 15:52:50 ERROR SSLHandlerProvider:25 - Server SSL context is null
+2017-07-01 15:53:13 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 15:53:14 ERROR SSLHandlerProvider:50 - Cannot load the keystore file
+java.io.IOException: Keystore was tampered with, or password was incorrect
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:780)
+	at sun.security.provider.JavaKeyStore$JKS.engineLoad(JavaKeyStore.java:56)
+	at sun.security.provider.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:224)
+	at sun.security.provider.JavaKeyStore$DualFormatJKS.engineLoad(JavaKeyStore.java:70)
+	at java.security.KeyStore.load(KeyStore.java:1445)
+	at SSLHandlerProvider.initSSLContext(SSLHandlerProvider.java:48)
+	at Server.main(Server.java:21)
+Caused by: java.security.UnrecoverableKeyException: Password verification failed
+	at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:778)
+	... 6 more
+2017-07-01 15:53:14 ERROR SSLHandlerProvider:77 - Failed to initialize the server-side SSLContext
+java.security.KeyStoreException: Uninitialized keystore
+	at java.security.KeyStore.aliases(KeyStore.java:1233)
+	at sun.security.ssl.SunX509KeyManagerImpl.<init>(SunX509KeyManagerImpl.java:127)
+	at sun.security.ssl.KeyManagerFactoryImpl$SunX509.engineInit(KeyManagerFactoryImpl.java:70)
+	at javax.net.ssl.KeyManagerFactory.init(KeyManagerFactory.java:256)
+	at SSLHandlerProvider.initSSLContext(SSLHandlerProvider.java:68)
+	at Server.main(Server.java:21)
+2017-07-01 15:53:14 INFO  LoggingHandler:150 - [id: 0x3687fde8] REGISTERED
+2017-07-01 15:53:14 INFO  LoggingHandler:150 - [id: 0x3687fde8] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 15:53:14 INFO  LoggingHandler:150 - [id: 0x3687fde8, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-07-01 15:53:26 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 15:53:27 INFO  LoggingHandler:150 - [id: 0x38b2f398] REGISTERED
+2017-07-01 15:53:27 INFO  LoggingHandler:150 - [id: 0x38b2f398] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 15:53:27 INFO  LoggingHandler:150 - [id: 0x38b2f398] CLOSE
+2017-07-01 15:53:27 INFO  LoggingHandler:150 - [id: 0x38b2f398] UNREGISTERED
+2017-07-01 15:53:35 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 15:53:36 INFO  LoggingHandler:150 - [id: 0x08ea9cdc] REGISTERED
+2017-07-01 15:53:36 INFO  LoggingHandler:150 - [id: 0x08ea9cdc] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 15:53:36 INFO  LoggingHandler:150 - [id: 0x08ea9cdc, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-07-01 15:53:37 INFO  LoggingHandler:150 - [id: 0x08ea9cdc, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xa8cfff2d, L:/127.0.0.1:8080 - R:/127.0.0.1:59609]
+2017-07-01 15:53:39 INFO  LoggingHandler:150 - [id: 0x08ea9cdc, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0xa1fedc90, L:/127.0.0.1:8080 - R:/127.0.0.1:59610]
+2017-07-01 16:04:41 INFO  SSLHandlerProvider:38 - Initiating SSL context
+2017-07-01 16:04:41 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e] REGISTERED
+2017-07-01 16:04:41 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e] BIND: 0.0.0.0/0.0.0.0:8080
+2017-07-01 16:04:41 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e, L:/0:0:0:0:0:0:0:0:8080] ACTIVE
+2017-07-01 16:04:50 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x818b7be9, L:/127.0.0.1:8080 - R:/127.0.0.1:59942]
+2017-07-01 16:04:50 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x484d5af0, L:/127.0.0.1:8080 - R:/127.0.0.1:59943]
+2017-07-01 16:04:54 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x57fc156c, L:/127.0.0.1:8080 - R:/127.0.0.1:59946]
+2017-07-01 16:04:54 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x2a036b72, L:/127.0.0.1:8080 - R:/127.0.0.1:59947]
+2017-07-01 16:04:55 INFO  LoggingHandler:150 - [id: 0x6c8f8e7e, L:/0:0:0:0:0:0:0:0:8080] RECEIVED: [id: 0x8f8cfe6c, L:/127.0.0.1:8080 - R:/127.0.0.1:59948]

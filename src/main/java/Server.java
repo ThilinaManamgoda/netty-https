@@ -6,9 +6,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
-/**
- * Created by maanadev on 6/6/17.
- */
+
 public class Server {
 
 
@@ -18,7 +16,6 @@ public class Server {
         // Configure the bootstrap.
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        EventLoopGroup remoteHostEventLoopGroup = new NioEventLoopGroup();
 
         // Load the certificates and initiate the SSL Context
         SSLHandlerProvider.initSSLContext();
@@ -37,7 +34,6 @@ public class Server {
         } finally {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
-            remoteHostEventLoopGroup.shutdownGracefully();
         }
 
     }
